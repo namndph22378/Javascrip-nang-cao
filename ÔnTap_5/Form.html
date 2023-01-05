@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return muahang()">
+    
+        <label> Sản Phẩm</label>
+        <input type="text"  id="sanpham"> <br>
+        <span id="sanpham_err" style="color: red;"></span> <br>
+
+        <label >Loại</label>
+        <select  id="loai">
+            <option></option>
+            <option id="option1">Loại 1</option>
+            <option id="option2">Loại 2</option>
+            <option id="option3">Loại 3</option>
+        </select> <br>
+        <span id="loai_err" style="color: red;"></span> <br>
+
+
+        <label> Đơn giá</label>
+        <input type="text"  id="dongia"> <br>
+        <span id="dongia_err" style="color: red;"></span> <br>
+
+        <label> Số lượng</label>
+        <input type="number" min="0" id="soluong"> <br>
+        <span id="soluong_err" style="color: red;"></span> <br>
+
+        <label> Thành tiền</label>
+        <input type="text"  id="thanhtien"> <br>
+        <span id="thanhtien_err" style="color: red;"></span> <br>
+
+
+        <label >Nơi nhận hàng : </label>
+        <input type="radio"  id="noithanh" onclick="hien_thi(false)">
+        nội thành
+        <span id="noithanh_err" style="color: red;"></span> 
+        
+        <input type="radio"  id="ngoaithanh" onclick="hien_thi(true)">
+        ngoai thành
+        <span id="ngoaithanh_err" style="color: red;"></span> 
+
+        <p id="phi_vc" style="display: none;">
+            <label>Phí Vận chuyển</label>
+            <input value="100000" readonly>
+        </p>
+        <hr>
+
+        <button type="submit">MUA HÀNG</button>
+
+    </form>
+
+    <script src="js/Form.js"></script>
+    
+</body>
+</html>
